@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ApplicationCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +10,17 @@ namespace Anyhting_La_Corner.view
 {
     public partial class index : System.Web.UI.Page
     {
+        Item[] items;
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
+        protected void addItem(object sender, EventArgs e)
+        {
+           
+           // Button theButton = (Button)sender;
+            
+        }
+        
     }
 }

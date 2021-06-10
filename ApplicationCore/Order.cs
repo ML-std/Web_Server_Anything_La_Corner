@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationCore
 {
-    class Program
+    class Order
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
