@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ApplicationCore
 {
-    class Reservation
+    class Reservation : ISendData
     {
+        public bool sendData(string[] values)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

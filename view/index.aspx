@@ -221,8 +221,12 @@
                                                                 <img src="../images/Chicken_Sambal.jpg" alt="Food" class="imageImg" style="width: 100%;"/>
                                                                 <asp:Panel runat="server"  class="middleImg">
                                                                     <asp:Panel runat="server" class="textImg">
-                                                                        <asp:Button runat="server" class="btn"  name="chicken_sambal"  Text="Add To Cart"  ID="chicken_sambal" value="ADD TO CART" Style="color: white; background-color: transparent" OnClick="addItem"></asp:Button>
-
+                                                                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                                                                         <asp:UpdatePanel ID="up1" runat="server">
+                                                                        <ContentTemplate>
+                                                                        <asp:Button runat="server"  class="btn"  name="chicken_sambal"  Text="Add To Cart"  id="chicken_sambal" value="ADD TO CART" Style="color: white; background-color: transparent" OnClick="addItem" OnClientClick="addItem();"></asp:Button>
+                                                                            </ContentTemplate>
+                                                                                </asp:UpdatePanel>
                                                                     </asp:Panel>
                                                                 </asp:Panel>
                                                             </asp:Panel>

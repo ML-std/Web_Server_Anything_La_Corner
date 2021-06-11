@@ -234,6 +234,10 @@ namespace Infrastructure
                 return "Operation failed. Error: " + e.Message;
             }
         }
+        public static void Main()
+        {
+
+        }
 
 
 

@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace ApplicationCore
 {
-    class Contact : ISendData
+    interface ISendData
     {
-        public bool sendData(string[] values)
-        {
-            throw new NotImplementedException();
-        }
+         Boolean sendData(string[] values);
     }
 }
