@@ -74,10 +74,5 @@
       <DependentUpon>RestaurantDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Restaurant.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

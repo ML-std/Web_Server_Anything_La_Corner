@@ -8,8 +8,8 @@
         <title>Anything La Corner</title>
         <link rel="stylesheet" href="../css/normalize.css"/>
         <link rel="stylesheet" href="../css/main.css" media="screen" type="text/css"/>
-        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'/>
-        <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'/>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'/>
+        <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" href="../css/bootstrap.css"/>
         <link rel="stylesheet" href="../css/style-portfolio.css"/>
         <link rel="stylesheet" href="../css/picto-foundry-food.css" />
@@ -17,13 +17,15 @@
         <link rel="stylesheet" href="../css/orderImage.css"/>
         <link rel="stylesheet" href="../css/enlarge.css"/>
 
-
+    
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href="../css/font-awesome.min.css" rel="stylesheet"/>
-        <link rel="icon" href="logo.ico" type="image/x-icon"/>
+        <link rel="icon" href="../images/logo.ico" type="image/x-icon"/>
     
 </head>
-<body><form runat="server">
+<body>
+   
+    <form runat="server">
 
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <asp:Panel runat="server" class="container">
@@ -224,7 +226,7 @@
                                                                         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                                                                          <asp:UpdatePanel ID="up1" runat="server">
                                                                         <ContentTemplate>
-                                                                        <asp:Button runat="server"  class="btn"  name="chicken_sambal"  Text="Add To Cart"  id="chicken_sambal" value="ADD TO CART" Style="color: white; background-color: transparent" OnClick="addItem" OnClientClick="addItem();"></asp:Button>
+                                                                        <asp:Button runat="server"  class="btn"  name="chicken_sambal"  Text="Add To Cart"  id="chicken_sambal" value="ADD TO CART" Style="color: white; background-color: transparent" onClick="addItem" OnClientClick="addItem();"></asp:Button>
                                                                             </ContentTemplate>
                                                                                 </asp:UpdatePanel>
                                                                     </asp:Panel>
@@ -239,7 +241,13 @@
                                                                 <img src="../images/Roti_Planta.jpg" alt="Food" class="imageImg" style="width: 100%;"/>
                                                                 <asp:Panel runat="server"  class="middleImg">
                                                                     <asp:Panel runat="server"  class="textImg">
-                                                                        <asp:Button runat="server" class="btn" name="roti_planta"  Text="Add To Cart"  id="roti_planta" value="ADD TO CART" style="color: white; background-color: transparent"  onclick="addItem"/></asp:Panel>
+                                                                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                                                        <ContentTemplate>
+                                                                        <asp:Button runat="server" class="btn" name="roti_planta"  Text="Add To Cart"  id="roti_planta" value="ADD TO CART" style="color: white; background-color: transparent"  onclick="addItem"/>
+                                                                            </ContentTemplate>
+                                                                                </asp:UpdatePanel>
+                                                                            </asp:Panel>
+                                                                             
                                                                 </asp:Panel>
                                                             </asp:Panel>
                                                             <h2 class="white">$9.50</h2>
@@ -249,7 +257,11 @@
                                                             <img src="../images/Mamak_Rojak.jpg" alt="Food" class="imageImg" style="width: 100%;"/>
                                                             <asp:Panel runat="server" class="middleImg">
                                                                 <asp:Panel runat="server" class="textImg">
-                                                                    <asp:Button runat="server" class="btn" name="mamak_rojak" Text="Add To Cart"  id="mamak_rojak" value="ADD TO CART" style="color: white; background-color: transparent"  onclick="addItem"></asp:Button>
+                                                                         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                                                        <ContentTemplate>
+                                                                    <asp:Button runat="server" class="btn" name="mamak_rojak" Text="Add To Cart"  id="mamak_rojak" value="ADD TO CART" style="color: white; background-color: transparent"  onclick="addItem"/>
+                                                                        </ContentTemplate>
+                                                                                </asp:UpdatePanel>
 
                                                                 </asp:Panel>
                                                             </asp:Panel>
@@ -260,7 +272,12 @@
                                                             <p class="white" style="font-size: 0.7em"> Nasi Goreng Pattaya</p>
                                                             <img src="../images/Nasi_Goreng_Pattayajpg.jpg" alt="Food" class="imageImg" style="width: 100%;"/>
                                                             <asp:Panel runat="server" class="middleImg">
+                                                               
+                                                                         <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                                                                        <ContentTemplate>
                                                                 <asp:Panel runat="server" class="textImg"><asp:Button runat="server" Text="Add To Cart"  class="btn" name="nasi_goreng" id="nasi_goreng" value="ADD TO CART" style="color: white; background-color: transparent"  onclick="addItem"/></asp:Panel>
+                                                                            </ContentTemplate>
+                                                                                </asp:UpdatePanel>
                                                             </asp:Panel>
                                                         </asp:Panel>
                                                             <h2 class="white">$11.50</h2>
@@ -268,9 +285,16 @@
                                                         <li class="item desert"> <asp:Panel runat="server" class="containerImg">
                                                             <p class="white" style="font-size: 0.7em">Stylo Milo</p>
                                                             <img src="../images/Stylo_Milo.jpg" alt="Food" class="imageImg" style="width: 100%;"/>
+                                                           
+                                                                         <asp:UpdatePanel ID="UpdatePanel4" runat="server">
+                                                                        <ContentTemplate>
                                                             <asp:Panel runat="server" class="middleImg">
-                                                                <asp:Panel runat="server" class="textImg"><asp:Button runat="server" Text="Add To Cart"  class="btn" name="stylo_milo" id="stylo_milo" value="ADD TO CART" style="color: white; background-color: transparent"  onclick="addItem"/></asp:Panel>
+
+                                                                <asp:Panel runat="server" class="textImg">
+                                                                    <asp:Button runat="server" Text="Add To Cart"  class="btn" name="stylo_milo" id="stylo_milo" value="ADD TO CART" style="color: white; background-color: transparent"  onclick="addItem"/></asp:Panel>
                                                             </asp:Panel>
+                                                            </ContentTemplate>
+                                                                                </asp:UpdatePanel>
                                                         </asp:Panel>
                                                             <h2 class="white">$4.50</h2>
                                                         </li>
@@ -278,8 +302,14 @@
                                                             <p class="white" style="font-size: 0.7em">Cendol</p>
                                                             <img src="../images/Cendol.jpg" alt="Food" class="imageImg" style="width: 100%;"/>
                                                             <asp:Panel runat="server" class="middleImg">
+                                                               
+                                                                         <asp:UpdatePanel ID="UpdatePanel5" runat="server">
+                                                                        <ContentTemplate>
                                                                 <asp:Panel runat="server" class="textImg"><asp:Button runat="server" Text="Add To Cart" class="btn" name="cendol" id="cendol" value="ADD TO CART" style="color: white; background-color: transparent"  onclick="addItem"/></asp:Panel>
+                                                            </ContentTemplate>
+                                                                                </asp:UpdatePanel>
                                                             </asp:Panel>
+                                                            
                                                         </asp:Panel>
                                                             <h2 class="white">$7</h2>
                                                         </li>
@@ -287,8 +317,17 @@
                                                             <p class="white" style="font-size: 0.7em">Fish Curry</p>
                                                             <img src="../images/Fish_Curry.jpg" alt="Food" class="imageImg" style="width: 100%;"/>
                                                             <asp:Panel runat="server" class="middleImg">
-                                                                <asp:Panel runat="server" class="textImg"><asp:Button runat="server"  Text="Add To Cart" class="btn" name="fish_curry" id="fish_curry" value="ADD TO CART" style="color: white; background-color: transparent"  onclick="addItem"/></asp:Panel>
+
+                                                                <asp:Panel runat="server" class="textImg">
+                                                                   
+                                                                         <asp:UpdatePanel ID="UpdatePanel6" runat="server">
+                                                                        <ContentTemplate>
+                                                                    <asp:Button runat="server"  Text="Add To Cart" class="btn" name="fish_curry" id="fish_curry" value="ADD TO CART" style="color: white; background-color: transparent"  onclick="addItem"/>
+                                                                    </ContentTemplate>
+                                                                                </asp:UpdatePanel>
+                                                                </asp:Panel>
                                                             </asp:Panel>
+                                                           
                                                         </asp:Panel>
                                                             <h2 class="white">$6.50</h2>
                                                         </li>
@@ -296,8 +335,17 @@
                                                             <p class="white" style="font-size: 0.7em">Anything La's Murtabak</p>
                                                             <img src="../images/Murtabak.jpg" alt="Food" class="imageImg" style="width: 100%;"/>
                                                             <asp:Panel runat="server" class="middleImg">
-                                                                <asp:Panel runat="server" class="textImg"><asp:Button runat="server" class="btn" Text="Add To Cart"  name="murtabak" id="murtabak" value="ADD TO CART" style="color: white; background-color: transparent" onclick="addItem"/></asp:Panel>
-                                                            </asp:Panel>
+                                                                <asp:Panel runat="server" class="textImg">
+                                                                    
+                                                                         <asp:UpdatePanel ID="UpdatePanel7" runat="server">
+                                                                        <ContentTemplate>
+                                                                    <asp:Button runat="server" class="btn" Text="Add To Cart"  name="murtabak" id="murtabak" value="ADD TO CART" style="color: white; background-color: transparent" onclick="addItem"/>
+                                                                            </ContentTemplate>
+                                                                                </asp:UpdatePanel>
+                                                                            </asp:Panel>
+                                                       
+                                                           </asp:Panel>
+                                                            
                                                         </asp:Panel>
                                                             <h2 class="white">$13</h2>
                                                         </li>
@@ -337,17 +385,17 @@
                                             <!-- Left Inputs -->
                                             <asp:Panel runat="server" class="col-md-6 ">
                                                 <!-- Name -->
-                                                <input type="text" name="orderName" id="orderName"  class="form" placeholder="Name" />
+                                                <asp:TextBox runat="server" type="text" name="orderName" id="orderName"  class="form" placeholder="Name" />
                                                 <!-- Email -->
-                                                <input type="email" name="orderEmail" id="orderEmail"  class="form" placeholder="Email" />
+                                                <asp:TextBox runat="server" name="orderEmail" id="orderEmail"  class="form" placeholder="Email" />
                                                 <!-- Subject -->
                                                
-                                                <input type="number" name="phoneNumber" id="phoneNumber" class="form" placeholder="Phone Number" />
+                                                <asp:TextBox runat="server" type="number" name="orderPhoneNumber" id="orderPhoneNumber" class="form" placeholder="Phone Number" />
                                             </asp:Panel><!-- End Left Inputs -->
                                             <!-- Right Inputs -->
                                             <asp:Panel runat="server" class="col-md-6">
                                                 <!-- Message -->
-                                                <textarea name="address" id="address" class="form textarea"  placeholder="Address"></textarea>
+                                                <asp:TextBox runat="server" textMode="MultiLine" name="address" id="address" class="form textarea"  placeholder="Address"></asp:TextBox>
                                             </asp:Panel><!-- End Right Inputs -->
 
                                     <asp:Panel runat="server" class="relative fullwidth col-xs-12">
@@ -384,7 +432,7 @@
                                         <p id="totalCost" style="font-weight: bold; font-size: 1.5em; border: #3c763d; text-align: left"></p>
                                         <br/>
                                         <!-- Send Button -->
-                                        <asp:Button ID="orderSubmit" CssClass="form-btn" runat="server" Text="Order!" />
+                                        <asp:Button ID="orderSubmit" CssClass="form-btn" runat="server" Text="Order!" OnClick="orderSubmit_Click" />
                                        
                                     </asp:Panel><!-- End Bottom Submit -->
                                     <!-- Clear -->
@@ -433,7 +481,7 @@
 
                                             <asp:Panel runat="server" class="col-xs-6 ">
                                                 <!-- Send Button -->
-                                                <asp:Button runat="server" type="submit" id="submitReservation" name="submit" class="text-center form-btn form-btn" Text="Reserve"></asp:Button>
+                                                <asp:Button runat="server" type="submit" id="submitReservation" name="submit" class="text-center form-btn form-btn" Text="Reserve" OnClick="submitReservation_Click"></asp:Button>
                                             </asp:Panel>
                                             
                                         </asp:Panel>
@@ -516,7 +564,7 @@
                                     <!-- Bottom Submit -->
                                     <asp:Panel runat="server" class="relative fullwidth col-xs-12">
                                         <!-- Send Button -->
-                                        <asp:Button runat="server" type="submit" id="contactSubmit" name="submit" class="form-btn" Text="Send Message"></asp:Button>
+                                        <asp:Button runat="server" type="submit" id="contactSubmit" name="submit" class="form-btn" Text="Send Message" OnClick="contactSubmit_Click"></asp:Button>
                                     </asp:Panel><!-- End Bottom Submit -->
                                     <!-- Clear -->
                                     <asp:Panel runat="server" class="clear"></asp:Panel>

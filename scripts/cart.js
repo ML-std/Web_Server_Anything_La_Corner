@@ -13,7 +13,7 @@ $("button").click(function () {
     itemID = this.id;
 });
 function addItem() {
-    document.getElementById("page-content").hidden = false;
+   // document.getElementById("page-content").hidden = false;
     console.log(itemID);
     for (let i = 0; i < items.length; i++) {
         if (itemID.toString().valueOf() === items[i].itemID.valueOf()) {

@@ -11,13 +11,14 @@ namespace Infrastructure
     public class DatabaseOperations
     {
         //Connection String for the database
-        private const string ConnectionString = "Provider=Microsoft.ACE.Oledb.12.0;Data Source=Restaurant.mdb";
+        public static string connectionString = "";
+        string ConnectionString;
         private OleDbConnection connection;
         private OleDbCommand command;
         public DatabaseOperations()
         {
-
-            connection = new OleDbConnection(ConnectionString);
+            ConnectionString = connectionString;
+            connection = new OleDbConnection("Provider = Microsoft.ACE.Oledb.12.0; Data Source = " + ConnectionString);
 
             command = new OleDbCommand();
             command.Connection = connection;
@@ -59,8 +60,16 @@ namespace Infrastructure
             }
             try
             {
+
+                ConnectionString = connectionString;
+                connection = new OleDbConnection("Provider = Microsoft.ACE.Oledb.12.0; Data Source = " + ConnectionString);
+
+                command = new OleDbCommand();
+                command.Connection = connection;
                 connection.Open();
+
                 command.CommandText = "INSERT INTO " + tableName + " (" + columnString + ") Values('" + valueString + "')";
+                string s = command.CommandText;
                 command.ExecuteNonQuery();
                 command.Dispose();
                 connection.Close();
@@ -97,7 +106,9 @@ namespace Infrastructure
             try
             {
                 connection.Open();
+                
                 command.CommandText = "INSERT INTO " + tableName + " Values('" + valueString + "')";
+                String normalText = command.CommandText;
                 command.ExecuteNonQuery();
                 command.Dispose();
                 connection.Close();

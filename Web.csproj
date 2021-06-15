@@ -32,6 +32,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,6 +56,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -104,6 +107,7 @@
     <Content Include="images\food_icon08.jpg" />
     <Content Include="images\kabob.jpg" />
     <Content Include="images\limes.jpg" />
+    <Content Include="images\logo.ico" />
     <Content Include="images\Logo.jpg" />
     <Content Include="images\Mamak_Rojak.jpg" />
     <Content Include="images\Menu_1.jpeg" />
@@ -122,9 +126,9 @@
     <Content Include="images\slider3.JPG" />
     <Content Include="images\steak.jpg" />
     <Content Include="images\Stylo_Milo.jpg" />
+    <Content Include="Restaurant.mdb" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\cart.js" />
-    <Content Include="scripts\enlarge.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\jquery.mixitup.min.js" />
@@ -167,6 +171,10 @@
     <ProjectReference Include="ApplicationCore\ApplicationCore.csproj">
       <Project>{44404561-F8F1-4B24-97AC-F584F85C02C5}</Project>
       <Name>ApplicationCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="Infrastructure\Infrastructure.csproj">
+      <Project>{56C142AA-513C-4999-B4E1-319654E2BCF4}</Project>
+      <Name>Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
